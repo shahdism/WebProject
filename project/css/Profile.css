@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #6a2220;
+    overflow: hidden;
+    font-family: system-ui;
+}
+
+.ClearFix {
+   clear: both;
+}
+
+.Logo {
+    margin: 0;
+    margin-left: 28px;
+    font-weight:bold;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.Logo span {
+
+}
+
+.SideNav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #98312E;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+
+.SideNav a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: whitesmoke;
+    display: block;
+    transition: 0.3s;
+}
+
+.SideNav a:hover{
+    color: #f1f1f1;
+    background-color: #6a2220;
+}
+
+#Main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+    margin-left: 300px;
+}
+
+.Head {
+    padding: 20px;
+}
+
+.Col-Div-6 {
+    width: 50%;
+    float: left;
+}
+
+.Profile {
+    display: inline-block;
+    float: right;
+    width: 160px;
+}
+
+.pro-image {
+    float: left;
+    width: 40px;
+    margin-top: 5px;
+}
+
+.Profile p {
+    color:white;
+    font-weight: 500;
+    margin-left: 55px;
+    margin-top: 10px;
+    font-size: 13.5px;
+}
+
+.Profile p span{
+    font-weight: 400;
+    font-size: 12px;
+    display: block;
+    color: #6a2220;
+}
+
+.Nav2 {
+    display: none;
+}
+.Col-Div-3 {
+    width: 33%;
+    float: left;
+    position: relative;
+    top: -180px;
+
+}
+
+.Box {
+    width: 85%;
+    height: 100px;
+    background-color: #98312E;
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Box p {
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.Box p span {
+    font-size: 15px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.box-icon {
+    font-size: 40px!important;
+    float: right;
+    margin-top: 35px!important;
+    color: #6a2220;
+    padding-right: 10px;
+}
+
+.Col-Div-8 {
+    /*width: 70%;*/
+    width: 70%;
+    position: relative;
+    top: -150px;
+    left: 180px;
+
+}
+
+.Col-Div-4 {
+    /*width: 30%;*/
+    width: 40%;
+    float: left;
+}
+
+.Content-Box {
+    padding: 20px
+}
+
+.Content-Box p {
+    margin: 0;
+    font-size: 19px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+/*.Content-Box p span {*/
+/*    float: right;*/
+/*    background-color: #ddd;*/
+/*    padding: 3px 10px;*/
+/*    font-size: 15px;*/
+/*}*/
+
+.Box-8, .Box-4 {
+    width: 96.5%;
+    background-color: #6a2220;
+    height: 330px;
+}
+
+.Box-8 {
+    margin-left: 10px;
+    width: 95%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 15px;
+    color: #ddd;
+    border-bottom: 1px solid #81818149;
+}
+
+.Circle-Wrap {
+    margin: 50px auto;
+    width: 150px;
+    height: 150px;
+    background: #e6e2e7;
+    border-radius: 50%;
+}
+
+.Circle-Wrap .Circle .Mask,
+.Circle-Wrap .Circle .Fill {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.Circle-Wrap .Circle .Mask {
+    clip: rect(0px, 150px, 150px, 75px);
+}
+
+.Circle-Wrap .Circle .Mask .Fill{
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: whitesmoke;
+}
+
+.Circle-Wrap .Circle .Mask.Full,
+.Circle-Wrap .Circle .Fill {
+    animation: fill ease-in-out 10s;
+    /*transform: rotate(126deg);*/
+    transform: rotate(140deg);
+}
+
+@keyframes fill {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        /*transform: rotate(126deg);*/
+        transform: rotate(140deg);
+    }
+}
+
+.Circle-Wrap .inside-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #fff;
+    line-height: 130px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+}
+

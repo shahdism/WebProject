@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/homePage.css">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <title>Autisim</title>
+</head>
+<body onload="changeChart()">
+<div class="hero_area">
+
+  <div class="hero_bg_box">
+    <img src="../images/autisimBack.jpg" alt="img">
+  </div>
+
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+            <span>
+              SANAD
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link fw-bold" href="">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="aboutUS.html"> About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="test2.html">Test</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="articles.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="login.php">Sign in</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+  <!-- slider section -->
+  <section class="slider_section ">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="detail-box">
+                  <h1>
+                    We Provide Best Care For Your Child
+                  </h1>
+
+                  <div class="btn-box">
+                    <a href="" class="btn1">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="detail-box">
+                  <h1>
+                    We Provide Best Healthcare
+                  </h1>
+
+                  <div class="btn-box">
+                    <a href="" class="btn1">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <ol class="carousel-indicators">
+        <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+        <li data-target="#customCarousel1" data-slide-to="1"></li>
+
+      </ol>
+    </div>
+
+  </section>
+  <!-- end slider section -->
+</div>
+
+<!-- What is Autisim section -->
+
+<section class="about_section layout_margin-bottom">
+  <div class="container  ">
+    <br><br><br>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="img-box">
+          <img src="../images/whatAutisimWhite.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>
+              What Is <span>Autisim</span>
+            </h2>
+          </div>
+          <p>
+            Autism is a developmental disorder with symptoms that appear within the first three years of life.
+            Its formal diagnostic name is autism spectrum disorder. The word “spectrum” indicates that autism
+            appears in different forms with varying levels of severity. That means that each individual with autism
+            experiences their own unique strengths, symptoms, and challenges.
+
+          </p>
+          <a href="">
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- end What is autisim section -->
+<br><br><br>
+<div>
+  <p style="text-align: center; font-size: 25px; color: #98312E;">
+    <b>Here ia a chart about the percentage of Autisim in some areas of the world</b></p>
+  <p style="text-align: center; font-size: 22px; color: #98312E;">
+    <b> The chart show number children have autisim of 10,000</b>
+  </p>
+</div>
+
+<div >
+
+  <canvas id="myChart" width="100px" height="100px" style="position: relative; left: 200px;" ></canvas>
+</div>
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+      labels: ['South-East Asia', 'USA', 'Middle East', 'Africa', 'Europe', 'Western Pacific'],
+      datasets: [{
+        label: '# of ASD of 10,000',
+        data: [34.0, 82.3, 86.5, 5, 63.5, 203.1],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+  function changeChart (w,h) {
+    var ch = document.getElementById("myChart");
+    ch.style.width = 1000+"px";
+    ch.style.height = 750+"px";
+    document.getElementById("chart1").resize();
+  }
+</script>
+<!-- footer section -->
+<footer class="footer_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 footer_col">
+        <div class="footer_contact">
+          <h4>
+            Reach at..
+          </h4>
+          <div class="contact_link_box">
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                  Location Nablus Rafidia st.
+                </span>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                  Call +970 595123685
+                </span>
+            </a>
+            <a href="mailto:sanad_org@gmail.com">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                  sanad_org@gmail.com
+                </span>
+            </a>
+          </div>
+        </div>
+        <div class="footer_social">
+          <a href="">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 footer_col">
+        <div class="footer_detail">
+          <h4>
+            About
+          </h4>
+          <p>
+            Sanad Charitable Association, is an association that provides services for children with autism,
+            evaluating and rehabilitating children and providing psychological, speech, language and special education services.
+
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-2 mx-auto footer_col">
+        <div class="footer_link_box">
+          <h4>
+            Links
+          </h4>
+          <div class="footer_links">
+            <a class="active" href="index.html">
+              Home
+            </a>
+            <a class="" href="about.html">
+              About
+            </a>
+            <a class="" href="departments.html">
+              Articles
+            </a>
+            <a class="" href="doctors.html">
+              Test
+            </a>
+            <a class="" href="contact.html">
+               Sign In
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-info">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved
+
+      </p>
+    </div>
+  </div>
+</footer>
+<!-- footer section -->
+
+<!-- jQery -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<!-- popper js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<!-- bootstrap js -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- owl slider -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<!-- custom js -->
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

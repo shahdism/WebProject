@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/book.css">
+</head>
+<body class=" body">
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <center><h2>Booking Form</h2></center>
+      <form action="form.php" method="POST">
+        <div class="row">
+          <div class="col-50">
+            <input type="text" id="fname" required  name="Parentname" placeholder="Parent Name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-50">
+            <input type="email" name="email" required placeholder="Email">
+          </div>
+          <div class="col-50">
+            <input type="number" name="phone" required placeholder="Phone">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-50">
+            <input type="text" id="address" name="address" placeholder="Address">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-50">
+            <input type="text" name="Childid" required placeholder="Child id">
+          </div>
+          <div class="col-50">
+            <input type="text" name="Child name" required placeholder="Child name">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label>Booking Date</label>
+            <input type="date" name="Date " required >
+          </div>
+          <div class="col-50">
+            <label>Time</label>
+            <input type="text" name="time" required >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-50">
+            <input type="number" name="age of the child" placeholder="age of the child" required >
+          </div>
+          <div class="col-50">
+            <select name="doctor name " >
+              <option value="null">Doctor name</option>
+              <option value="1">John Doe</option>
+              <option value="2">Mike Ross</option>
+              <option value="3">Jane Doe</option>
+
+            </select>
+          </div>
+        </div>
+
+
+        <input type="submit" value="Book Now" class="btn">
+
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>
